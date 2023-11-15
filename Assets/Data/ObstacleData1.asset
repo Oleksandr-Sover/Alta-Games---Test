@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0547983b733ade499284f049d994da8, type: 3}
+  m_Name: ObstacleData1
+  m_EditorClassIdentifier: 
+  fieldWidth: 11
+  fieldHeight: 4.5
+  minQuantity: 50
+  maxQuantity: 120
+  minFillingProbability: 0.2
+  fieldCenter: {x: 0, y: 0.25, z: 8}
+  infectionTime: 1
+  infectionMaterial: {fileID: 2100000, guid: b5832d328fd42c842b9d6d0683041a5a, type: 2}
