@@ -30,7 +30,8 @@ namespace GameLogic
 
         void Start()
         {
-            StartCoroutine(endGameHandler.ProcessEndGame());
+            StartCoroutine(endGameHandler.ProcessEndShot());
+            StartCoroutine(endGameHandler.ProcessWin());
         }
 
         void SetGameEnding() => playerController.SetEndShotState();

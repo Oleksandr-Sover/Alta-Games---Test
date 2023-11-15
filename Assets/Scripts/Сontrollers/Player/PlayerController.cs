@@ -30,6 +30,7 @@ namespace GameLogic
 
         readonly string terrainTag = "Terrain";
         readonly string obstacleTag = "Obstacle";
+        readonly string doorTag = "Door"; 
 
         bool endShot;
 
@@ -43,7 +44,7 @@ namespace GameLogic
 
             CurrentState = StateInitializer.NewState(playersRestingState);
 
-            collisionDetector.Initialization(terrainTag, obstacleTag);
+            collisionDetector.Initialization(terrainTag, obstacleTag, doorTag);
 
             playersAccumulationState.Initialization(shotController, this, lineController);
             playersShotState.Initialization(shotController);
@@ -52,6 +53,7 @@ namespace GameLogic
             obstacleController.obstacleInfectionState.onDestroyObstacles += OnRestingOrMoveState;
             shotController.onDestroy += OnRestingOrMoveState;
             collisionDetector.onCollisionB += gameController.ReloadScene;
+            collisionDetector.onCollisionC += gameController.ReloadScene;
         }
 
         void Start()

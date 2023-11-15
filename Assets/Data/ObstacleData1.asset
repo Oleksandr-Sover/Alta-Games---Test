@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldWidth: 11
   fieldHeight: 4.5
-  minQuantity: 50
-  maxQuantity: 120
+  minQuantity: 70
+  maxQuantity: 100
   minFillingProbability: 0.2
   fieldCenter: {x: 0, y: 0.25, z: 8}
   infectionTime: 1

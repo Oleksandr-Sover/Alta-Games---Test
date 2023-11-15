@@ -32,10 +32,8 @@ namespace GameLogic
             this.layerMask = layerMask;
         }
 
-        public IEnumerator ProcessEndGame()
+        public IEnumerator ProcessEndShot()
         {
-            yield return waitForSec;
-
             while (true)
             {
                 if (player.transform.localScale.x <= playerData.MinPower)
@@ -44,6 +42,16 @@ namespace GameLogic
                     yield break;
                 }
 
+                yield return waitForSec;
+            }
+        }
+
+        public IEnumerator ProcessWin()
+        {
+            yield return waitForSec;
+
+            while (true)
+            {
                 if (!CheckRaycast(leftRay.transform) && !CheckRaycast(rightRay.transform))
                 {
                     onWin?.Invoke();
